@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-home" %}
+
+{# ESTE BLOCK SERA MANDADO PARA O BLOCK Q EXISTE NO LAYOUT.HTML NA LINHA 13 #}
+{% block styles %}
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+</head>
+
+<body>
+
+{# CONTEUDO DA PARTE INDEX #}
+{% block content %}
+    <div class="content ">
+
+        <header>
+            <img src="/assests/logo.svg" alt="Logomarca">
+            <a href="/create-point">
+                <span></span>
+                Cadastre um ponto de coleta</a>
+        </header>
+
+        <main>
+            <h1 class="red">Seu marketplace de coleta de resíduos</h1>
+
+            <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
+            <a href="#">
+                <span></span>
+                <strong>Pesquisar pontos de coleta</strong>
+            </a href="#">
+
+        </main>
+
+    </div>
+{% endblock content %}
+
+{# TELA DE PESQUISA #}
+{% block modal %}
+    {% include "partials/modal.html" %}
+{% endblock modal %}
+
+{# SCRIPTS DO INDEX #}
+{% block scripts %}
+    <script src="/scripts/index.js"></script>
+
+{% endblock scripts %}
